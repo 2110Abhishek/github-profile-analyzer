@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "c1f7b0a7-6d36-4021-a66e-d226f7c76a18",
+		"name": "GitHub Profile Analyzer API",
+		"description": "API collection for analyzing and retrieving GitHub profile data.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Analyze & Store Profile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/profiles/octocat",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profiles",
+						"octocat"
+					]
+				},
+				"description": "Fetches profile from GitHub, extracts insights, and stores in MySQL."
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Profiles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/profiles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profiles"
+					]
+				},
+				"description": "Retrieves all analyzed profiles from the database."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Profile By Username",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/profiles/octocat",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profiles",
+						"octocat"
+					]
+				},
+				"description": "Retrieves a single profile from the database by username."
+			},
+			"response": []
+		}
+	]
+}
