@@ -1,6 +1,7 @@
 # GitHub Profile Analyzer API
 
 **Live Deployed API URL:** [https://github-profile-analyzer-cjnn.onrender.com](https://github-profile-analyzer-cjnn.onrender.com)
+**Example Endpoint:** [https://github-profile-analyzer-cjnn.onrender.com/api/profiles/octocat](https://github-profile-analyzer-cjnn.onrender.com/api/profiles/octocat)
 
 A Node.js & Express backend service that analyzes a GitHub user profile using the public GitHub API and stores insights in a MySQL database.
 
