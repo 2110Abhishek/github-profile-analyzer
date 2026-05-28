@@ -11,6 +11,13 @@ A Node.js & Express backend service that analyzes a GitHub user profile using th
 - MySQL (mysql2)
 - Axios (for GitHub API calls)
 
+## 🌟 Tech/Features Added Beyond Requirements
+- **Smart "Upsert" Logic**: Uses `ON DUPLICATE KEY UPDATE` to automatically update a user's stats if they are fetched again, preventing duplicate database entries and keeping data fresh.
+- **Database Connection Pooling**: Utilizes `mysql2` connection pools rather than a single connection for improved performance, scalability, and stability under load.
+- **Cloud-Ready Security**: Configured to support SSL connections (`rejectUnauthorized: false`), allowing seamless integration with modern, secure cloud databases like Aiven or PlanetScale.
+- **API Rate Limit Handling**: Built-in support for authenticated GitHub API requests via `GITHUB_TOKEN` to bypass the standard 60-requests-per-hour limit and scale up to 5,000 requests per hour.
+- **Automated Error Handling**: Gracefully catches `404 Not Found` (when a GitHub user doesn't exist) and `403 Forbidden` (rate limit) errors, returning clear, readable JSON responses to the client instead of crashing the server.
+
 ## Prerequisites
 - Node.js installed (v14 or higher)
 - MySQL Server installed and running locally
